@@ -1,0 +1,30 @@
+plugins {
+    id 'application'
+}
+
+group 'org.aklimov'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation files(
+            '/home/ruaabwv/projects/jcef/distrib/bin/gluegen-rt.jar',
+            '/home/ruaabwv/projects/jcef/distrib/bin/gluegen-rt-natives-linux-amd64.jar',
+            '/home/ruaabwv/projects/jcef/distrib/bin/jcef.jar',
+            '/home/ruaabwv/projects/jcef/distrib/bin/jogl-all.jar',
+            '/home/ruaabwv/projects/jcef/distrib/bin/jogl-all-natives-linux-amd64.jar'
+    )
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+java {
+
+}
